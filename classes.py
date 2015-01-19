@@ -78,11 +78,17 @@ class Monster(BaseClass):
 		#sine function
 		self.rect.y = self.amplitude * math.sin(self.period * self.rect.x) + 140
 
-
 	@staticmethod
 	def movement(SCREENWIDTH):
 		for monster in Monster.List:
 			monster.fly(SCREENWIDTH)
+
+class Fireball(Baseclass):
+	List = pygame.sprite.Group()
+	def __init__(self, x, y, width, height, image_string):
+		BaseClass.__init__(self, x, y, width, height, image_string)
+		Fireball.List.add(self)
+
 			
 
 

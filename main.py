@@ -2,6 +2,7 @@ import pygame
 import sys
 from classes import *
 from process import *
+from magic import *
 
 SCREENWIDTH = 640
 SCREENHEIGHT = 360

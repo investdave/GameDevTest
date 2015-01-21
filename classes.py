@@ -3,7 +3,6 @@ from random import randint
 import math
 
 class BaseClass(pygame.sprite.Sprite):
-
 	allsprites = pygame.sprite.Group()
 	def __init__(self, x, y, width, height, image_string):
 		pygame.sprite.Sprite.__init__(self)
@@ -42,7 +41,7 @@ class Bug(BaseClass):
 
 	def __jump(self, SCREENHEIGHT):
 
-		max_jump = 40
+		max_jump = 100
 
 		if self.jumping:
 
@@ -67,8 +66,8 @@ class Monster(BaseClass):
 		BaseClass.__init__(self, x, y, width, height, image_string)
 		Monster.List.add(self)
 		self.velx = randint(2,5)
-		self.amplitude = randint(20, 140)
-		self.period = randint(4,5) / 100.0
+		self.amplitude = randint(20, 150)
+		self.period = randint(4,6) / 100.0
 
 	def fly(self, SCREENWIDTH):
 		if  self.rect.x + self.width > SCREENWIDTH or self.rect.x < 0:
@@ -83,11 +82,6 @@ class Monster(BaseClass):
 		for monster in Monster.List:
 			monster.fly(SCREENWIDTH)
 
-class Fireball(Baseclass):
-	List = pygame.sprite.Group()
-	def __init__(self, x, y, width, height, image_string):
-		BaseClass.__init__(self, x, y, width, height, image_string)
-		Fireball.List.add(self)
 
 			
 

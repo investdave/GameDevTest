@@ -2,7 +2,7 @@ import pygame
 import sys
 from classes import *
 from process import *
-from magic import *
+#from magic import *
 
 SCREENWIDTH = 640
 SCREENHEIGHT = 360
@@ -17,7 +17,12 @@ background = pygame.image.load('./images/forest.jpg')
 monster = Monster(40, 130, 64, 64, './images/monster.png')
 monster1 = Monster(40, 130, 64, 64, './images/monster.png')
 monster2 = Monster(40, 130, 64, 64, './images/monster.png')
-monster3 = Monster(40, 130, 64, 64, './images/monster.png')
+#monster3 = Monster(40, 130, 64, 64, './images/rsz_cat.png')
+#monster4 = Monster(40, 130, 64, 64, './images/rsz_cat.png')
+monster5 = Monster(40, 130, 64, 64, './images/monster2.png')
+monster6 = Monster(40, 130, 64, 64, './images/monster2.png')
+monster7 = Monster(40, 130, 64, 64, './images/monster2.png')
+
 
 while True:
 	process(bug)

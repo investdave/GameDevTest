@@ -11,10 +11,10 @@ def process(bug):
 
 	if keys[pygame.K_d]:
 		bug.image = pygame.image.load("./images/cat.png")
-		bug.velx = 5
+		bug.velx = 20
 	elif keys[pygame.K_a]:
 		bug.image = pygame.image.load("./images/cat_back.png")
-		bug.velx = -5
+		bug.velx = -20
 	else:
 		bug.velx = 0
 	
